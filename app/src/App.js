@@ -1,27 +1,30 @@
 import React from "react";
 import { connect } from "react-redux";
 import axios from "axios";
+import css from "./App.css";
 
 const App = (props) => {
   return (
-    <div className="center">
-      <header className="title">Dad Jokes, yeehaw!!!</header>
+    <div className="body">
+      <div className="center">
+        <header>React-Redux API!!!</header>
 
-      {props.isLoading ? (
-        <p className="text">Loading...</p>
-      ) : (
-        <p className="text">{props.dadJoke}</p>
-      )}
+        {props.isLoading ? (
+          <p className="text">Loading...</p>
+        ) : (
+          <p className="text">{props.dadJoke}</p>
+        )}
 
-      <button
-        onClick={() => {
-          props.fetchDadJokeFromApi();
-        }}
-        // className="bg-white hover:bg-gray-300 px-4 py-2 rounded-lg mt-5 font-bold"
-        className="button"
-      >
-        Get new Joke
-      </button>
+        <button
+          onClick={() => {
+            props.fetchDadJokeFromApi();
+          }}
+          // className="bg-white hover:bg-gray-300 px-4 py-2 rounded-lg mt-5 font-bold"
+          className="button"
+        >
+          Get new Joke
+        </button>
+      </div>
     </div>
   );
 };

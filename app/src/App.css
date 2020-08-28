@@ -39,24 +39,31 @@
 .center {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .body {
   background-image: linear-gradient(white, #5f65e9, #282c34);
+  height: 90vh;
 }
-.title {
+header {
   font-weight: bold;
+  font-size: 50px;
+  width: 90vw;
+  align-items: center;
 }
 .text {
-  color: white;
+  color: #5f65e9;
   font-weight: bold;
 }
 .button {
   background: white;
   padding: 6px 8px;
   border-radius: 4px;
+  display: flex;
+  justify-content: center;
 }
 button:hover {
-  background-color: lightskyblue;
-  color: black;
+  background-color: #5f65e9;
+  color: white;
   font-weight: 500px;
 }
